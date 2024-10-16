@@ -1,9 +1,17 @@
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput, TextField, Button, Link } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useState } from "react";
 import homePageImage from '../assets/img_login.png'
 
 export function HomePage() {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+    const handleMouseUpPassword = (event) => {
+        event.preventDefault();
+    };
     return (
         <section className="flex gap-x-40">
             <img src={homePageImage} className="h-screen" />
@@ -17,11 +25,28 @@ export function HomePage() {
                     label='Email address'
                 />
 
-                <TextField
-                    className='w-full'
-                    id="outlined-basic"
-                    label='Password'
-                />
+<FormControl className="w-full" sx={{ m: 1 }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                    <OutlinedInput
+
+                        id="outlined-adornment-password"
+                        type={showPassword ? 'text' : 'password'}
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                    aria-label="toggle password visibility"
+                                    onClick={handleClickShowPassword}
+                                    onMouseDown={handleMouseDownPassword}
+                                    onMouseUp={handleMouseUpPassword}
+                                    edge="end"
+                                >
+                                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                                </IconButton>
+                            </InputAdornment>
+                        }
+                        label="Password"
+                    />
+                </FormControl>
 
                 <Button
                     className='w-full'

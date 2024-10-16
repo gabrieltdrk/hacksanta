@@ -1,9 +1,6 @@
-import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput } from '@mui/material';
+import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput, TextField, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-
 import { useState } from "react";
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import signupImage from '../assets/img_cadastro.png'
 
 export function SignupPage() {
@@ -47,10 +44,10 @@ export function SignupPage() {
                     label='Email address'
                 />
 
-<FormControl className="w-full" sx={{ m: 1, width: '25ch' }} variant="outlined">
+                <FormControl className="w-full" sx={{ m: 1 }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
-                        
+
                         id="outlined-adornment-password"
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
@@ -77,7 +74,7 @@ export function SignupPage() {
                 > Cadastrar
                 </Button>
 
-                
+
             </div>
 
         </section>
