@@ -17,12 +17,12 @@ export function SignupPage() {
     };
 
     return (
-        <section className="flex gap-x-40">
-            <img src={signupImage} className="h-screen" />
-            <div className="flex gap-2 flex-col justify-center items-center w-[40%]">
+        <section className="flex h-screen lg:gap-x-40 lg:justify-start justify-center">
+            <img src={signupImage} className="hidden lg:block" />
+            <form className="flex gap-2 flex-col justify-center items-center w-[60%] lg:w-[40%]">
                 <h3 className="my-4">Cadastre-se</h3>
 
-                <div className="flex gap-2 w-full">
+                <div className="flex flex-col lg:flex-row gap-2 w-full">
                     <TextField
                         className='w-full'
                         required
@@ -44,10 +44,10 @@ export function SignupPage() {
                     label='Email address'
                 />
 
-                <FormControl className="w-full" sx={{ m: 1 }} variant="outlined">
+                <FormControl className=" w-full" sx={{ m: 1 }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
-
+                        className="m-0 w-full"
                         id="outlined-adornment-password"
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
@@ -59,7 +59,7 @@ export function SignupPage() {
                                     onMouseUp={handleMouseUpPassword}
                                     edge="end"
                                 >
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    {showPassword ? <Visibility /> : <VisibilityOff />}
                                 </IconButton>
                             </InputAdornment>
                         }
@@ -75,7 +75,7 @@ export function SignupPage() {
                 </Button>
 
 
-            </div>
+            </form>
 
         </section>
     )
