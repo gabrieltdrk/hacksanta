@@ -5,21 +5,33 @@ import logoHeader from '../assets/logo_header.png';
 import avatarF from '../assets/avatar_f.png';
 
 export function Header() {
-    const [showPaper, setShowPaper] = useState(false);
+    const [showOptions, setShowOptions] = useState({
+        showMenu: false,
+        showProfile: false,
+    });
 
-    const togglePaper = () => {
-        setShowPaper(prevShowPaper => !prevShowPaper);
+    const toggleHeaderMenu = () => {
+        setShowOptions(prevState => ({
+            ...prevState,
+            showMenu: !prevState.showMenu
+        }));
+    };
+    const toggleProfile = () => {
+        setShowOptions(prevState => ({
+            ...prevState,
+            showProfile: !prevState.showProfile
+        }));
     };
 
     return (
         <nav className="w-full flex items-center justify-between px-6 -bg--color-principal-100 h-16">
             <header className="relative flex items-center gap-6">
                 <div className="block md:hidden">
-                    <IconButton onClick={togglePaper}>
+                    <IconButton onClick={toggleHeaderMenu}>
                         <Menu htmlColor="white" />
                     </IconButton>
 
-                    {showPaper && (
+                    {showOptions.showMenu && (
                         <Paper
                             elevation={3}
                             style={{
@@ -56,9 +68,29 @@ export function Header() {
                 </div>
             </header>
             <footer className="flex items-center gap-6">
-                <Avatar alt="Usuário" src={avatarF} />
+                <Avatar
+                    onClick={toggleProfile}
+                    alt="Usuário" src={avatarF}
+                    className="hover:cursor-pointer" />
                 <Notifications htmlColor="white" />
             </footer>
+
+            {showOptions.showProfile && (
+                <Paper
+                    elevation={3}
+                    style={{
+                        position: 'absolute',
+                        top: '64px',
+                        right: 0,
+                        padding: '4px',
+                        zIndex: 10,
+                        width: 'fit-content'
+                    }}
+                >
+                    <MenuItem>Meu perfil</MenuItem>
+                    <MenuItem>Configurações</MenuItem>
+                </Paper>
+            )}
         </nav>
     );
 }
