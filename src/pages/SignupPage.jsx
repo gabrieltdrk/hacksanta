@@ -1,4 +1,5 @@
-import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput, TextField, Button } from '@mui/material';
+import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput, TextField, Button, Link } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useState } from "react";
 import signupImage from '../assets/img_cadastro.png'
@@ -73,6 +74,14 @@ export function SignupPage() {
                     color=''
                 > Cadastrar
                 </Button>
+
+                <Link
+                    color='#ABABAB'
+                    component={RouterLink}
+                    to='/'
+                    className="self-start"
+                    href="/register"
+                    underline="none">Voltar</Link>
 
 
             </form>

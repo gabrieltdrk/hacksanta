@@ -1,6 +1,8 @@
 import { FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput, TextField, Button, Link, Alert } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useState } from "react";
+
 import '../globals.css';
 import homePageImage from '../assets/img_login.png'
 import googleIcon from '../assets/icon_google.svg'
@@ -64,6 +66,8 @@ export function HomePage() {
                 </FormControl>
 
                 <Button
+                    component={RouterLink}
+                    to='/portfolio'
                     color='#ABABAB'
                     className='w-full'
                     variant='contained'
@@ -72,9 +76,21 @@ export function HomePage() {
 
                 <Link
                     color='#ABABAB'
+                    component={RouterLink}
+                    to='/register'
                     className="self-start"
-                    href="#"
-                    underline="none">Cadastre-se</Link>
+                    href="/register"
+                    underline="none">Cadastre-se
+                </Link>
+
+                <Link
+                    color='#ABABAB'
+                    component={RouterLink}
+                    to='/portfolio'
+                    className="self-start"
+                    href="/register"
+                    underline="none">Portfolio
+                </Link>
             </form>
             {/* <Alert variant="filled" severity="success">
                 This is a filled success Alert.

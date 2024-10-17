@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 
 export function GridPortfolio() {
     // contar projetos no banco de dados;
-    const projects = 0;
+    const projects = 1;
 
     return (
         <main className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8">

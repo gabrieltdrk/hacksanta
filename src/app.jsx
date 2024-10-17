@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { HomePage } from './pages/Homepage';
-import { SignupPage } from './pages/SignupPage';
-import { PortfolioPage } from './pages/PortfolioPage';
+import { Routes } from './routes';
 
 export function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -11,12 +9,7 @@ export function App() {
   };
   return (
     <>
-    <PortfolioPage />
-      {/* {isLoggedIn ? (
-        <PortfolioPage />
-      ) : (
-        <HomePage onLogin={handleLogin} />
-      )} */}
+      <Routes />
     </>
   )
 }
