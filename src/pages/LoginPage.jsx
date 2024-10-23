@@ -6,7 +6,7 @@ import '../globals.css'
 import homePageImage from '../assets/img_login.png'
 import googleIcon from '../assets/icon_google.svg'
 
-export function HomePage() {
+export function LoginPage() {
   return (
     <section className="flex h-screen lg:gap-x-40 lg:justify-start justify-center">
       <img src={homePageImage} className="hidden lg:block" alt="Login" />
@@ -29,7 +29,7 @@ export function HomePage() {
 
         <h2 className="self-start text-base lg:text-2xl my-3 mt-6 text-[var(--color-neutral-110)]">Faça login com email</h2>
 
-        <TextField className="w-full" id="email" label="Email address" l required />
+        <TextField className="w-full" id="email" label="Email address" required />
 
         <FormControl className="w-full" sx={{ m: 1 }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
