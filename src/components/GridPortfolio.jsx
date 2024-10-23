@@ -1,25 +1,25 @@
 import { Container } from '@mui/material';
 import { Collections } from '@mui/icons-material';
 
-export function GridPortfolio() {
-    // contar projetos no banco de dados;
-    const projects = 1;
+export function GridPortfolio({ usuario, handleOpen }) {
+    const projects = 0;
 
     return (
         <main className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8">
             {projects === 0 ? (
                 <Container
+                    onClick={handleOpen}
                     sx={{
+                        cursor: 'pointer',
                         height: '258px',
                         width: '312px',
                         bgcolor: 'lightgray',
                         display: 'flex',
                         flexDirection: 'column',
                         gap: 1,
-                        alignItems: 'center',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        margin: '0 auto' // Centraliza o container horizontalmente
+                        margin: '0 auto'
                     }}
                 >
                     <Collections sx={{
