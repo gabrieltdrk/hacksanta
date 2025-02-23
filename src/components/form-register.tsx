@@ -4,6 +4,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useActionState, useState } from "react";
 import { register, RegisterState } from "@/app/(auth)/register/actions";
+import { redirect } from "next/navigation";
 
 export default function FormRegister() {
     const [showPassword, setShowPassword] = useState(false);
@@ -80,6 +81,11 @@ export default function FormRegister() {
                 {state.success === true && (state.message)}
                 {state.success === false && (state.message)}
             </form>
+            <button
+                className="self-start"
+                onClick={() => redirect("/login")}>
+                Voltar
+            </button>
         </div>
     )
 }

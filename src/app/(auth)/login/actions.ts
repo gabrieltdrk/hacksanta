@@ -1,46 +1,45 @@
 'use server'
-
-import { revalidatePath } from 'next/cache'
+import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 
-import { createClient } from '@/utils/supabase/server'
+export type LoginState = {
+  success: null | boolean
+  message?: string
+}
 
-export async function login(formData: FormData) {
+export async function login(previousState: LoginState, formData: FormData) {
   const supabase = await createClient()
 
-  // type-casting here for convenience
-  // in practice, you should validate your inputs
-  const data = {
-    email: formData.get('email') as string,
-    password: formData.get('password') as string,
+  const email = formData.get('email') as string | null
+  const senha = formData.get('senha') as string | null
+
+  if (!email || !senha) {
+    return {
+      success: false,
+      message: "E-mail e senha são obrigatórios.",
+    }
   }
 
-  const { error } = await supabase.auth.signInWithPassword(data)
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password: senha
+  })
 
   if (error) {
-    redirect('/error')
+    return {
+      success: false,
+      message: error.message
+    }
   }
 
-  revalidatePath('/', 'layout')
   redirect('/')
 }
 
-export async function signup(formData: FormData) {
+
+export async function signOut() {
   const supabase = await createClient()
+  const { error } = await supabase.auth.signOut()
 
-  // type-casting here for convenience
-  // in practice, you should validate your inputs
-  const data = {
-    email: formData.get('email') as string,
-    password: formData.get('password') as string,
-  }
-
-  const { error } = await supabase.auth.signUp(data)
-
-  if (error) {
-    redirect('/error')
-  }
-
-  revalidatePath('/', 'layout')
-  redirect('/')
+  if (!error)
+    redirect("/login")
 }

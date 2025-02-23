@@ -1,11 +1,12 @@
 import "./globals.css";
 import type { Metadata } from 'next'
- 
+import Header from "@/components/header";
+
 export const metadata: Metadata = {
   title: 'My App',
   description: 'My App is a...',
 }
- 
+
 export default function RootLayout({
   children,
 }: {
@@ -14,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div id="root">{children}</div>
+        <div id="root">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   )
