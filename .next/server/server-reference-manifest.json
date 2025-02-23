@@ -1,5 +1,39 @@
 {
-  "node": {},
+  "node": {
+    "001df986c1d3b4b0f68d54d5fab6395f9619e9ab0b": {
+      "workers": {
+        "app/(auth)/register/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregister%5C%5Cactions.ts%22%2C%5B%5B%22001df986c1d3b4b0f68d54d5fab6395f9619e9ab0b%22%2C%22signOut%22%5D%2C%5B%2260ba970aa801f2be710b33391458a89d3fae240185%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/register/page": "action-browser"
+      }
+    },
+    "60208a0ec039102ccaf13ea5edf85e99260ecc8da2": {
+      "workers": {
+        "app/(auth)/register/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregister%5C%5Cactions.ts%22%2C%5B%5B%22001df986c1d3b4b0f68d54d5fab6395f9619e9ab0b%22%2C%22signOut%22%5D%2C%5B%2260ba970aa801f2be710b33391458a89d3fae240185%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/register/page": "action-browser"
+      }
+    },
+    "60ba970aa801f2be710b33391458a89d3fae240185": {
+      "workers": {
+        "app/(auth)/register/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregister%5C%5Cactions.ts%22%2C%5B%5B%22001df986c1d3b4b0f68d54d5fab6395f9619e9ab0b%22%2C%22signOut%22%5D%2C%5B%2260ba970aa801f2be710b33391458a89d3fae240185%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/register/page": "action-browser"
+      }
+    }
+  },
   "edge": {},
   "encryptionKey": "5pNzeUV28wEaL7/ZIbxk6GF+InhLUaW4MnsFxLqXt84="
 }
