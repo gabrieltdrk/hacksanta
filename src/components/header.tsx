@@ -21,10 +21,12 @@ export default function Header({ user }: HeaderProps) {
     const pathname = usePathname();
     const router = useRouter();
     const isAtLoginPage = pathname === '/login';
+    const isAtRegisterPage = pathname === '/register';
+
 
     const [showProfileOptions, setShowProfileOptions] = useState(false);
 
-    if (isAtLoginPage) return null;
+    if (isAtLoginPage || isAtRegisterPage) return null;
 
     return (
         <header className="flex justify-between bg-blue-950 p-3 text-white">

@@ -20,9 +20,9 @@ export default function FormLogin() {
     return (
         <div className="self-center w-full mr-40 flex flex-col gap-6">
             <h1 className="text-2xl lg:text-4xl text-center">Entre no Orange Portfólio</h1>
-            <Button type="button" className="w-12 text-black">
+            {/* <Button type="button" className="w-12 text-black">
                 Entrar com Google
-            </Button>
+            </Button> */}
             <form className="flex flex-col gap-3" action={formAction}>
 
 
@@ -60,15 +60,17 @@ export default function FormLogin() {
                     Entrar
                 </Button>
 
-                <Alert variant="filled" severity="error" className="w-full mt-2">
-                    Email ou senha inválidos. Tente novamente.
-                </Alert>
+
 
                 <Link color="#ABABAB" href="/register" className="self-start">
                     Cadastre-se
                 </Link>
 
-                {state.success === false && (state.message)}
+                {state.success === false && (
+                    <Alert variant="filled" severity="error" className="text-center mt-2">
+                        Email ou senha inválidos. Tente novamente.
+                    </Alert>
+                )}
             </form>
         </div>
     )
