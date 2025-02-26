@@ -1,6 +1,6 @@
 'use server';
 
-import { Projeto, UserInfo } from '@/app/meus-projetos/page';
+import { UserInfo } from '@/app/meus-projetos/page';
 import GridPortfolioItem from '@/components/portfolio-grid-item';
 import ProjectProfile from '@/components/portfolio-profile';
 import SearchProjects from '@/components/search-projects';

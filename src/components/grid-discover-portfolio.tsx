@@ -1,6 +1,4 @@
 'use server';
-
-
 export default async function GridDiscover() {
 
     return (

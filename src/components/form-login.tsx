@@ -2,9 +2,9 @@
 import { Alert, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { useActionState, useState } from "react";
-import { login, LoginState } from "@/app/(auth)/login/actions";
-import Link from "next/link";
+import { useActionState, useState } from 'react';
+import { login, LoginState } from '@/app/(auth)/login/actions';
+import Link from 'next/link';
 
 export default function FormLogin() {
     const [showPassword, setShowPassword] = useState(false);
@@ -56,9 +56,9 @@ export default function FormLogin() {
                     />
                 </FormControl>
 
-                <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                <button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-md">
                     Entrar
-                </Button>
+                </button>
 
 
 

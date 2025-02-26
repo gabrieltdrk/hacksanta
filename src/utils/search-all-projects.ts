@@ -1,6 +1,6 @@
 'use server';
 
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 import { createClient } from "./supabase/server";
 import { AllProjectsProps } from "@/components/portfolio-grid";
 
