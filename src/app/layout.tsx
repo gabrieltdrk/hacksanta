@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import { createClient } from "@/utils/supabase/server";
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Orange Portfolio",
   description: "My App is a...",
 };
 
@@ -35,7 +35,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body>
         <div id="root">
           <Header user={user} />

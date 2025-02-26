@@ -1,6 +1,4 @@
-import GridPortfolio from '@/components/grid-portfolio'
-import { redirect } from 'next/navigation'
-import { createClient } from '@/utils/supabase/server'
+import GridPortfolio from '@/components/portfolio-grid';
 import RedirectIfNotLogged from '@/utils/redirect-if-not-logged';
 
 export interface Projeto {
@@ -8,7 +6,13 @@ export interface Projeto {
   nome: string;
   descricao: string;
   tags: string;
+  is_public: boolean;
   created_at: string;
+}
+
+export interface TodosProjetos {
+  projeto: Projeto;
+  usuario: UserInfo
 }
 
 export interface UserInfo {
@@ -21,6 +25,11 @@ export interface UserInfo {
 
 export default async function PortfolioPage() {
   const userInfo = await RedirectIfNotLogged();
+  
 
-  return <GridPortfolio userInfo={userInfo} />;
+  return (
+    <main className="flex flex-col gap-3 p-10">
+      <GridPortfolio userInfo={userInfo} />;
+    </main>
+  )
 }

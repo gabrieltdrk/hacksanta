@@ -23,10 +23,13 @@ export default function Header({ user }: HeaderProps) {
     const isAtLoginPage = pathname === '/login';
     const isAtRegisterPage = pathname === '/register';
 
+    const nomeCompleto = `${user?.nome} ${user?.sobrenome} `
+
 
     const [showProfileOptions, setShowProfileOptions] = useState(false);
 
     if (isAtLoginPage || isAtRegisterPage) return null;
+
 
     return (
         <header className="flex justify-between bg-blue-950 p-3 text-white">
@@ -69,7 +72,7 @@ export default function Header({ user }: HeaderProps) {
                             width: 'fit-content'
                         }}
                     >
-                        <MenuItem disabled>{user ? user.nome : "Não autenticado"}</MenuItem>
+                        <MenuItem disabled>{user ? nomeCompleto : "Não autenticado"}</MenuItem>
                         <MenuItem disabled>{user ? user.email : "Não autenticado"}</MenuItem>
                         <Divider />
                         <MenuItem>

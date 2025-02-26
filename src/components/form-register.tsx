@@ -3,7 +3,7 @@ import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedIn
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useActionState, useState } from "react";
-import { register, RegisterState } from "@/app/(auth)/register/actions";
+import { register, RegisterState } from "@/app/(auth)/registro/actions";
 import { redirect } from "next/navigation";
 
 export default function FormRegister() {

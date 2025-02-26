@@ -1,7 +1,7 @@
 import FormLogin from '@/components/form-login'
 import Image from 'next/image'
 
-export default function LoginPage() {
+export default function PaginaLogin() {
 
 
   return (

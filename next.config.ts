@@ -5,7 +5,19 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-//   assetPrefix: "https://meu-amigo-misterio.vercel.app",
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+
+  //   assetPrefix: "https://meu-amigo-misterio.vercel.app",
 };
 
 export default nextConfig;

@@ -62,7 +62,7 @@ export default function FormLogin() {
 
 
 
-                <Link color="#ABABAB" href="/register" className="self-start">
+                <Link color="#ABABAB" href="/registro" className="self-start">
                     Cadastre-se
                 </Link>
 
