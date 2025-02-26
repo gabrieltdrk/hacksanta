@@ -1,8 +1,9 @@
 import GridPortfolio from '@/components/grid-portfolio'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
+import RedirectIfNotLogged from '@/utils/redirect-if-not-logged';
 
-interface Projeto {
+export interface Projeto {
   id: string;
   nome: string;
   descricao: string;
@@ -19,24 +20,7 @@ export interface UserInfo {
 }
 
 export default async function PortfolioPage() {
-  const supabase = await createClient();
+  const userInfo = await RedirectIfNotLogged();
 
-  const { data: usuario } = await supabase.auth.getUser();
-
-  if (!usuario.user) {
-    return redirect('/login');
-  }
-
-  const { data: userInfo } = await supabase
-    .from('usuarios')
-    .select('*, projetos!left(id_criador)')
-    .eq('id', usuario.user.id) as unknown as { data: UserInfo[] }
-
-    console.log(userInfo[0].id)
-
-  if (!userInfo) {
-    return redirect('/login');
-  }
-
-  return <GridPortfolio userInfo={userInfo[0]} />;
+  return <GridPortfolio userInfo={userInfo} />;
 }

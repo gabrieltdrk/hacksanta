@@ -1,26 +1,28 @@
-'use client'
-import { UserInfo } from '@/app/meus-projetos/page';
-import { useState } from 'react';
-import Image from 'next/image'
+'use client';
 
-export default function GridPortfolioItem({ userInfo }: { userInfo: UserInfo }) {
-    const [openGrid, setOpenGrid] = useState(true)
-    const projects = 0;
+import { Projeto, UserInfo } from '@/app/meus-projetos/page';
+import Image from 'next/image';
 
+interface GridPortfolioItemProps {
+    projeto: Projeto;
+    userInfo: UserInfo;
+}
+
+export default function GridPortfolioItem({ userInfo, projeto }: GridPortfolioItemProps) {
     return (
         <div className="flex flex-col">
-            <div>imagem</div>
+            <div>Imagem</div>
             <div className="flex justify-between">
-                <section className="flex gap-2">
+                <section className="flex gap-2 items-center">
                     <Image
-                        src={"/avatar_f.png"}
+                        src="/avatar_f.png"
                         width={25}
                         height={25}
-                        alt="alt"
+                        alt="Avatar"
                     />
-                    <span>{`${userInfo.nome} ${userInfo.sobrenome}`}</span>
+                    <span>{userInfo.nome}</span>
                     <span>Ponto</span>
-                    <span>Data</span>
+                    <span>{projeto.created_at}</span>
                 </section>
                 <div>tags</div>
             </div>
