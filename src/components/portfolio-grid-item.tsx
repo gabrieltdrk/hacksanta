@@ -27,16 +27,22 @@ export default function PortfolioGridItem({ userInfo, projeto }: PortfolioGridIt
     const isAtDiscoverPage = pathname === '/descobrir';
     const supabase = createClient();
 
+    console.log(projeto.imagem_url)
+
     useEffect(() => {
         async function fetchImage() {
-            const { data } = supabase.storage.from('projetos').getPublicUrl(projeto.imagem_url);
-            if (data) {
-                setImageUrl(data.publicUrl);
+            if (projeto.imagem_url) {
+                if (projeto.imagem_url.startsWith('https://')) {
+                    setImageUrl(projeto.imagem_url);
+                } else {
+                    const { data } = await supabase.storage.from('projetos').getPublicUrl(projeto.imagem_url);
+                    if (data) {
+                        setImageUrl(data.publicUrl);
+                    }
+                }
             }
         }
-        if (projeto.imagem_url) {
-            fetchImage();
-        }
+        fetchImage();
     }, [projeto.imagem_url, supabase]);
 
     return (
@@ -88,3 +94,4 @@ export default function PortfolioGridItem({ userInfo, projeto }: PortfolioGridIt
         </div>
     );
 }
+
