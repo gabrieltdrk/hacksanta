@@ -18,7 +18,7 @@ export default function FormLogin() {
     )
 
     return (
-        <div className="self-center w-full mr-40 flex flex-col gap-6">
+        <div className="self-center w-full p-5 2xl:mr-40 flex flex-col gap-6">
             <h1 className="text-2xl lg:text-4xl text-center">Entre no Orange Portfólio</h1>
             {/* <Button type="button" className="w-12 text-black">
                 Entrar com Google
@@ -60,9 +60,7 @@ export default function FormLogin() {
                     Entrar
                 </button>
 
-
-
-                <Link color="#ABABAB" href="/registro" className="self-start">
+                <Link color="#ABABAB" href="/registro" className="self-start text-gray-400">
                     Cadastre-se
                 </Link>
 

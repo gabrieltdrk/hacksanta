@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function RegisterPage() {
     return (
-        <div className="flex h-screen lg:gap-x-40 lg:justify-start justify-center">
+        <div className="flex flex-col lg:flex-row h-screen gap-3 lg:gap-x-40 justify-center items-center">
             <Image
                 className="hidden md:block h-auto"
                 src="/img_cadastro.png"

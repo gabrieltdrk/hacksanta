@@ -44,13 +44,18 @@
         "app/page": {
           "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%5D&__client_imported__=true!",
           "async": false
+        },
+        "app/(auth)/registro/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregistro%5C%5Cactions.ts%22%2C%5B%5B%2200d1b87796f6433b930e33bd55c98f98217c4887b0%22%2C%22signOut%22%5D%2C%5B%2260d9efa0200f5bfbaa1276f8e36bd90b901a9b3213%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
         }
       },
       "layer": {
         "app/descobrir/page": "action-browser",
         "app/meus-projetos/page": "action-browser",
         "app/(auth)/login/page": "action-browser",
-        "app/page": "action-browser"
+        "app/page": "action-browser",
+        "app/(auth)/registro/page": "action-browser"
       }
     },
     "60a7a3e1188e2576b3989816dc99319f40fcb2b726": {
@@ -70,13 +75,18 @@
         "app/page": {
           "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%5D&__client_imported__=true!",
           "async": false
+        },
+        "app/(auth)/registro/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregistro%5C%5Cactions.ts%22%2C%5B%5B%2200d1b87796f6433b930e33bd55c98f98217c4887b0%22%2C%22signOut%22%5D%2C%5B%2260d9efa0200f5bfbaa1276f8e36bd90b901a9b3213%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
         }
       },
       "layer": {
         "app/descobrir/page": "action-browser",
         "app/meus-projetos/page": "action-browser",
         "app/(auth)/login/page": "action-browser",
-        "app/page": "action-browser"
+        "app/page": "action-browser",
+        "app/(auth)/registro/page": "action-browser"
       }
     },
     "0029515bedff8355c6579c487a6d73605040fdac82": {
@@ -88,6 +98,28 @@
       },
       "layer": {
         "app/meus-projetos/page": "rsc"
+      }
+    },
+    "00d1b87796f6433b930e33bd55c98f98217c4887b0": {
+      "workers": {
+        "app/(auth)/registro/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregistro%5C%5Cactions.ts%22%2C%5B%5B%2200d1b87796f6433b930e33bd55c98f98217c4887b0%22%2C%22signOut%22%5D%2C%5B%2260d9efa0200f5bfbaa1276f8e36bd90b901a9b3213%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/registro/page": "action-browser"
+      }
+    },
+    "60d9efa0200f5bfbaa1276f8e36bd90b901a9b3213": {
+      "workers": {
+        "app/(auth)/registro/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.1.7_@babel+core@7.2_707606878b63055b6e81e0df4d49439d/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Clogin%5C%5Cactions.ts%22%2C%5B%5B%220042693aa3785ae357c55d3ec0c46ff6675f407aed%22%2C%22signOut%22%5D%2C%5B%2260a7a3e1188e2576b3989816dc99319f40fcb2b726%22%2C%22login%22%5D%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5CGabriel%5C%5CDocuments%5C%5CProjetos%5C%5CPersonal%5C%5Chacksanta%5C%5Csrc%5C%5Capp%5C%5C(auth)%5C%5Cregistro%5C%5Cactions.ts%22%2C%5B%5B%2200d1b87796f6433b930e33bd55c98f98217c4887b0%22%2C%22signOut%22%5D%2C%5B%2260d9efa0200f5bfbaa1276f8e36bd90b901a9b3213%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/registro/page": "action-browser"
       }
     }
   },

@@ -21,7 +21,7 @@ export default function Header({ user }: HeaderProps) {
     const pathname = usePathname();
     const router = useRouter();
     const isAtLoginPage = pathname === '/login';
-    const isAtRegisterPage = pathname === '/register';
+    const isAtRegisterPage = pathname === '/registro';
 
     const nomeCompleto = `${user?.nome} ${user?.sobrenome} `
 

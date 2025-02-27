@@ -1,5 +1,5 @@
 'use client'
-import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
+import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useActionState, useState } from "react";
@@ -18,7 +18,7 @@ export default function FormRegister() {
     )
 
     return (
-        <div className="self-center w-full mr-40 flex flex-col gap-6">
+        <div className="self-center w-full lg:mr-40 flex flex-col gap-6 p-3">
             <h1 className="text-center text-5xl">Cadastre-se</h1>
             <form className="flex flex-col gap-3" action={formAction}>
                 <div className="flex gap-3">
@@ -69,20 +69,16 @@ export default function FormRegister() {
                         label="Password"
                     />
                 </FormControl>
-                <Button
-                    className='w-full bg-orange-500'
-                    variant='contained'
-                    type='submit'
-                >
+                <button className='w-full bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-md' type='submit'>
                     Cadastrar
-                </Button>
+                </button>
 
 
                 {state.success === true && (state.message)}
                 {state.success === false && (state.message)}
             </form>
             <button
-                className="self-start"
+                className="self-start text-gray-400"
                 onClick={() => redirect("/login")}>
                 Voltar
             </button>

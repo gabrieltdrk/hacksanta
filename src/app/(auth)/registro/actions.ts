@@ -15,7 +15,6 @@ export async function register(previousState: RegisterState, formData: FormData)
   const email = formData.get('email') as string
   const senha = formData.get('senha') as string
 
-  // Criando usuário no Supabase Auth
   const { data: authData, error: authError } = await supabase.auth.signUp({
     email,
     password: senha,
@@ -40,7 +39,6 @@ export async function register(previousState: RegisterState, formData: FormData)
     }
   }
 
-  // Inserindo usuário na tabela "usuarios"
   const { error: insertError } = await supabase.from('usuarios').insert({
     id: userId,
     nome,
