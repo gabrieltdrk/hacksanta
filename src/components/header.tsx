@@ -75,9 +75,9 @@ export default function Header({ user }: HeaderProps) {
                         <MenuItem disabled>{user ? nomeCompleto : "Não autenticado"}</MenuItem>
                         <MenuItem disabled>{user ? user.email : "Não autenticado"}</MenuItem>
                         <Divider />
-                        <MenuItem>
+                        <MenuItem onClick={signOut}>
                             <ExitToApp />
-                            <button type="button" onClick={signOut}>
+                            <button type="button" >
                                 Sair
                             </button>
                         </MenuItem>
