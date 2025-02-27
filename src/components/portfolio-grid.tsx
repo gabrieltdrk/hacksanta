@@ -49,7 +49,7 @@ export default async function PortfolioGrid({ userInfo, allProjects }: { userInf
                     projetos.map((projeto) => (
                         <GridPortfolioItem
                             key={projeto.id}
-                            userInfo={userInfo}  // Passando o userInfo diretamente
+                            userInfo={userInfo}
                             projeto={projeto}
                         />
                     ))

@@ -5,7 +5,7 @@ export default function RegisterPage() {
     return (
         <div className="flex flex-col lg:flex-row h-screen gap-3 lg:gap-x-40 justify-center items-center">
             <Image
-                className="hidden md:block h-auto"
+                className="hidden lg:block h-auto"
                 src="/img_cadastro.png"
                 width={700}
                 height={700}

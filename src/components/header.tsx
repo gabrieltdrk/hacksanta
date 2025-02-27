@@ -33,7 +33,7 @@ export default function Header({ user }: HeaderProps) {
 
     return (
         <header className="flex justify-between bg-blue-950 p-3 text-white">
-            <div className="flex gap-20 justify-center items-center ml-4">
+            <div className="flex gap-7 lg:gap-20 justify-center items-center ml-4">
                 <Image
                     className="hover:cursor-pointer"
                     onClick={() => router.push("/")}
