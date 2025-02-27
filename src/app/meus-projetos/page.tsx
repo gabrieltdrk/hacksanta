@@ -29,7 +29,7 @@ export default async function PortfolioPage() {
   
 
   return (
-    <main className="flex flex-col gap-3 p-10">
+    <main className="flex flex-col gap-3 p-10 animate-fade-in-up">
       <GridPortfolio userInfo={userInfo} />
     </main>
   )

@@ -19,7 +19,7 @@ export default function FormRegister() {
 
     return (
         <div className="self-center w-full lg:mr-40 flex flex-col gap-6 p-3">
-            <h1 className="text-center text-5xl">Cadastre-se</h1>
+            <h1 className="text-center text-5xl animate-fade-in">Cadastre-se</h1>
             <form className="flex flex-col gap-3" action={formAction}>
                 <div className="flex gap-3">
                     <TextField

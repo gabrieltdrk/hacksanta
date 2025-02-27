@@ -10,6 +10,6 @@ export default async function PrivatePage() {
   }
 
   return (
-    <p>Hello {data.user.email}</p>
+    <div className='animate-fade-in-up'>Hello {data.user.email}</div>
   )
 }
