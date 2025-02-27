@@ -23,17 +23,17 @@ export interface AllProjectsProps {
 
 export default async function PortfolioGrid({ userInfo, allProjects }: { userInfo?: UserInfo, allProjects?: AllProjectsProps[] }) {
     const supabase = createClient();
-    
+
     const projetos = userInfo?.projetos || [];
 
-    async function fetchProjectImages(projects: AllProjectsProps[]) {
-        return await Promise.all(projects.map(async (project) => {
-            const { data } = await supabase.storage.from('projetos').getPublicUrl(project.imagem_url);
-            return { ...project, imageUrl: data?.publicUrl || '/placeholder.svg' };
-        }));
+    function fetchProjectImages(projects: AllProjectsProps[]) {
+        return projects.map((project) => {
+            const { data } = supabase.storage.from('projetos').getPublicUrl(project.imagem_url || '');
+            return { ...project, imageUrl: data.publicUrl || '/placeholder.svg' };
+        });
     }
 
-    const projectsWithImages = allProjects ? await fetchProjectImages(allProjects) : [];
+    const projectsWithImages = allProjects ? fetchProjectImages(allProjects) : [];
 
     if (!userInfo) {
         return (
