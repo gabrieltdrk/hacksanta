@@ -9,15 +9,21 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "placehold.co",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "rbleucyoxsngvodjkkgc.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/projetos/**",
       },
     ],
   },
 
-  //   assetPrefix: "https://meu-amigo-misterio.vercel.app",
+  // assetPrefix: "https://meu-amigo-misterio.vercel.app",
 };
 
 export default nextConfig;

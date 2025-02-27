@@ -8,6 +8,7 @@ export interface Projeto {
   tags: string;
   is_public: boolean;
   created_at: string;
+  imagem_url: string;
 }
 
 export interface TodosProjetos {
@@ -29,7 +30,7 @@ export default async function PortfolioPage() {
 
   return (
     <main className="flex flex-col gap-3 p-10">
-      <GridPortfolio userInfo={userInfo} />;
+      <GridPortfolio userInfo={userInfo} />
     </main>
   )
 }

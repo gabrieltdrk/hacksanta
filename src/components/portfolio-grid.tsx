@@ -4,6 +4,7 @@ import { UserInfo } from '@/app/meus-projetos/page';
 import GridPortfolioItem from '@/components/portfolio-grid-item';
 import ProjectProfile from '@/components/portfolio-profile';
 import SearchProjects from '@/components/search-projects';
+import { createClient } from '@/utils/supabase/client';
 
 export interface AllProjectsProps {
     id: string;
@@ -12,19 +13,32 @@ export interface AllProjectsProps {
     tags: string;
     is_public: boolean;
     created_at: string;
+    imagem_url: string;
     usuarios: {
+        id: string;
         nome: string;
         sobrenome: string;
     };
 }
 
 export default async function PortfolioGrid({ userInfo, allProjects }: { userInfo?: UserInfo, allProjects?: AllProjectsProps[] }) {
+    const supabase = createClient();
+    
     const projetos = userInfo?.projetos || [];
+
+    async function fetchProjectImages(projects: AllProjectsProps[]) {
+        return await Promise.all(projects.map(async (project) => {
+            const { data } = await supabase.storage.from('projetos').getPublicUrl(project.imagem_url);
+            return { ...project, imageUrl: data?.publicUrl || '/placeholder.svg' };
+        }));
+    }
+
+    const projectsWithImages = allProjects ? await fetchProjectImages(allProjects) : [];
 
     if (!userInfo) {
         return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8">
-                {allProjects?.map((aProject) => (
+                {projectsWithImages.map((aProject) => (
                     <GridPortfolioItem
                         key={aProject.id}
                         userInfo={aProject.usuarios}
