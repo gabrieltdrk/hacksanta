@@ -88,6 +88,8 @@ export default function PortfolioGridItem({ userInfo, projeto }: PortfolioGridIt
                     <span>{userInfo ? `${userInfo.nome} ${userInfo.sobrenome}` : 'Usuário Desconhecido'}</span>
                     <span>●</span>
                     <span>{new Date(projeto.created_at).toLocaleDateString("pt-BR")}</span>
+                    <span>●</span>
+                    <span className={`${projeto.is_public ? 'text-green-400' : 'text-red-400'}`}>PROJETO ${projeto.is_public ? 'PÚBLICO' : 'PRIVADO'}</span>
                 </section>
                 <div>tags</div>
             </div>
