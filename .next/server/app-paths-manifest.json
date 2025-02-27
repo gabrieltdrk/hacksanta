@@ -1,7 +1,7 @@
 {
   "/descobrir/page": "app/descobrir/page.js",
+  "/meus-projetos/page": "app/meus-projetos/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(auth)/registro/page": "app/(auth)/registro/page.js",
   "/page": "app/page.js",
-  "/meus-projetos/page": "app/meus-projetos/page.js"
+  "/(auth)/registro/page": "app/(auth)/registro/page.js"
 }
