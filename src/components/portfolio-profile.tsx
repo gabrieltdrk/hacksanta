@@ -3,7 +3,7 @@
 import type React from "react"
 import type { UserInfo } from "@/app/meus-projetos/page"
 import Image from "next/image"
-import { useState, useRef } from "react"
+import { useState, useRef, ChangeEvent } from "react"
 import {
     Dialog,
     DialogContent,
@@ -52,7 +52,7 @@ export default function ProjectProfile({ userInfo }: ProjectProfileProps) {
         }
     }
 
-    async function uploadImage(e) {
+    async function uploadImage(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         const file = fileInputRef.current?.files?.[0]
         if (!file) return
